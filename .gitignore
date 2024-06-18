@@ -19,7 +19,6 @@ htmlcov/
 .env-dev
 src/.env
 src/docker
-src/joke_api/config.py
 instance/
 PoC.txt
 joke_topic.mp3
