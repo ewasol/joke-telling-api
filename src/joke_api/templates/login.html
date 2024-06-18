@@ -1,0 +1,23 @@
+{% from "field_macro.html" import render_text_field %}
+{% extends 'base.html' %}
+{% block head %}
+    <title>Login</title>
+{% endblock %}
+
+{% block body %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <form action="#" method="POST">
+        {{login_form.hidden_tag()}}
+        {{render_text_field(login_form.email)}}
+        {{render_text_field(login_form.password)}}
+        {{render_text_field(login_form.remember)}}
+        {{render_text_field(login_form.submit)}}
+    </form>
+
+{% endblock %}
